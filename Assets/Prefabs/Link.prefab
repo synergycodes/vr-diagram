@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5019421058618933703}
   - component: {fileID: 3112865505061517845}
   - component: {fileID: 4461792884677909081}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Link
   m_TagString: Link
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: dbb1f068a26692a42b7e2fcdc02c0843, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
