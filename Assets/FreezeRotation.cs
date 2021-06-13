@@ -1,0 +1,14 @@
+using UnityEngine;
+
+public class FreezeRotation : MonoBehaviour
+{
+    Rigidbody m_Rigidbody;
+
+    private void Start()
+    {
+        //Fetch the Rigidbody from the GameObject with this script attached
+        m_Rigidbody = GetComponent<Rigidbody>();
+        //Stop the Rigidbody from rotating
+        m_Rigidbody.freezeRotation = true;
+    }
+}
