@@ -5,8 +5,6 @@ public class LinkPositionUpdater : MonoBehaviour
     // Start is called before the first frame update
     public GameObject portFrom;
     public GameObject portTo;
-
-    public string test;
     private LineRenderer lineRenderer;
     void Start()
     {
@@ -20,8 +18,5 @@ public class LinkPositionUpdater : MonoBehaviour
             Vector3 endPoint = portFrom.transform.position;
             Vector3[] points = {startPoint,endPoint};
             lineRenderer.SetPositions(points);
-
-        
-        
     }
 }

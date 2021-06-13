@@ -111,9 +111,8 @@ public class OVRGrabbable : MonoBehaviour
 	virtual public void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {
         if (grabPoint.gameObject.tag == "spawner") {
-            Debug.Log("should spawn");
             Instantiate(grabPoint.gameObject, grabPoint.gameObject.transform.position, Quaternion.identity);
-            grabPoint.gameObject.tag = "Untagged";
+            grabPoint.gameObject.tag = "Node";
         }
             m_grabbedBy = hand;
             m_grabbedCollider = grabPoint;

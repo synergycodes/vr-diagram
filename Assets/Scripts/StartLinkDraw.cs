@@ -36,7 +36,6 @@ public class StartLinkDraw : MonoBehaviour
 
         if (OVRInput.GetUp(OVRInput.Button.One)) {
             portTo =findClosestByTag.find("portTo");
-            Debug.Log(portTo);
             linkPositionUpdater.portTo = portTo;
         }
         

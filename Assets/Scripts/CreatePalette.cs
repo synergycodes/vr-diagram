@@ -13,7 +13,7 @@ public class CreatePalette : MonoBehaviour
     {
         for (int i = 0 ; i < colors.Length ; i++) {
 
-                GameObject paletteNode = Instantiate(nodeSpawnerPrefab, new Vector3(-3, 1 + i/2f, -1 ), Quaternion.identity);
+                GameObject paletteNode = Instantiate(nodeSpawnerPrefab, new Vector3(-3, 1 + i/3f, -1 ), Quaternion.identity);
                 Color myColor = new Color();
                 ColorUtility.TryParseHtmlString (colors[i], out myColor);
 

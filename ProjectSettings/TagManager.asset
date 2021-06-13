@@ -9,6 +9,7 @@ TagManager:
   - lineRenderer
   - Link
   - spawner
+  - Node
   layers:
   - Default
   - TransparentFX
