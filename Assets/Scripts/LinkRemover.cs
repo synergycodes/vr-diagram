@@ -1,9 +1,12 @@
 using UnityEngine;
+using System;
 
 public class LinkRemover : MonoBehaviour
 {
 
     FindClosestByTag findClosestByTag;
+    GameObject prevClosestGameObject;
+    GameObject closestGameObject;
     // Start is called before the first frame update
     void Start()
     {

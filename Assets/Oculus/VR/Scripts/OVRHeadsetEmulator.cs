@@ -154,8 +154,9 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 
 		foreach (KeyCode key in activateKeys)
 		{
-			if (Input.GetKey(key))
+			if (Input.GetKey(key)){
 				return true;
+			}
 		}
 
 		return false;
