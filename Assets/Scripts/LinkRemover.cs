@@ -17,7 +17,7 @@ public class LinkRemover : MonoBehaviour
     void Update()
     {
         if (OVRInput.GetDown(OVRInput.RawButton.B)) {
-            Destroy(findClosestByTag.find("Link"));
+            Destroy(findClosestByTag.find("Link").gameObject);
         }
     }
 }

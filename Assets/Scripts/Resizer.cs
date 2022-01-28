@@ -15,9 +15,8 @@ public class Resizer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) {
-            catchedGameObject = findClosestByTag.find("Node");
-            // float distance = Convert.ToSingle(Math.Pow(calculateDistance(), 1));
+        if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger) || Input.GetButtonDown("Fire2")) {
+            catchedGameObject = findClosestByTag.find("Node").gameObject;
             float distance  = calculateDistance();
             catchedGameObject.GetComponent<Transform>().localScale =  new Vector3(distance,distance,distance);
         }

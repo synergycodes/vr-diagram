@@ -14,7 +14,7 @@ public class NodeRemover : MonoBehaviour
     void Update()
     {
         if (OVRInput.GetDown(OVRInput.RawButton.X)) {
-            Destroy(findClosestByTag.find("Node"));
+            Destroy(findClosestByTag.find("Node").gameObject);
         }
     }
 }

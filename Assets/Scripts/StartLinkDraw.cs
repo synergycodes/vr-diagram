@@ -28,14 +28,14 @@ public class StartLinkDraw : MonoBehaviour
 
             GameObject link = Instantiate(linkPrefab);
             linkPositionUpdater = link.GetComponent<LinkPositionUpdater>();
-            portFrom =findClosestByTag.find("portFrom");
+            portFrom =findClosestByTag.find("portFrom").gameObject;
             linkPositionUpdater.portFrom = portFrom;
             linkPositionUpdater.portTo = handCollider;
 
         }
 
         if (OVRInput.GetUp(OVRInput.Button.One)) {
-            portTo =findClosestByTag.find("portTo");
+            portTo =findClosestByTag.find("portTo").gameObject;
             linkPositionUpdater.portTo = portTo;
         }
         
