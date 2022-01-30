@@ -16,7 +16,7 @@ public class Selector : MonoBehaviour
 
     void Update() {
         if (Input.GetButtonDown("1") | OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) ) {
-            highlightClosest(new List<string>(){"spawner", "Link", "Node"});
+            highlightClosest(new List<string>(){"Node"});
         }
     }
 
