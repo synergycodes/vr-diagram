@@ -1,16 +1,17 @@
 using UnityEngine;
 
-public class ModifyNodeColor : MonoBehaviour
+public class ModifyNodeShape : MonoBehaviour
 {
+
     private Selector selector;
     void Start() {
         selector = gameObject.GetComponent<Selector>();
     }
-   public void modify(Color selectedColor) {
+   public void modify(Mesh mesh) {
             GameObject selectedNode = selector.current.gameObject;
 
             if (selectedNode) {
-            selectedNode.GetComponent<Renderer>().material.color = selectedColor;
+            selectedNode.GetComponent<MeshFilter>().mesh = mesh;
             }
     }
         

@@ -10,11 +10,11 @@ public class CreatePalette : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0 ; i < PaletteColors.colors.Length ; i++) {
+        for (int i = 0 ; i < Palette.colors.Length ; i++) {
 
-                GameObject paletteNode = Instantiate(nodeSpawnerPrefab, new Vector3(-3, 1 + i/3f, -1 ), Quaternion.identity);
+                GameObject paletteNode = Instantiate(nodeSpawnerPrefab, new Vector3(0, 1 + i/3f, -1 ), Quaternion.identity);
                 Color myColor = new Color();
-                ColorUtility.TryParseHtmlString (PaletteColors.colors[i], out myColor);
+                ColorUtility.TryParseHtmlString (Palette.colors[i], out myColor);
                 paletteNode.GetComponent<Renderer>().material.color = myColor;
         }
 
