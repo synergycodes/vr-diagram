@@ -24,6 +24,6 @@ public class Resizer : MonoBehaviour
 
     private float calculateDistance() {
         Vector3 diff = catchedGameObject.transform.position - hand.transform.position;
-        return diff.sqrMagnitude;
+        return Math.Min(diff.sqrMagnitude * 3, 1.15f) ;
     }
 }
