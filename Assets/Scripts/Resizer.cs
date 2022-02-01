@@ -17,8 +17,10 @@ public class Resizer : MonoBehaviour
     {
         if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger) || Input.GetButtonDown("Fire2")) {
             catchedGameObject = findClosestByTag.find("Node").gameObject;
+            if (catchedGameObject) {
             float distance  = calculateDistance();
             catchedGameObject.GetComponent<Transform>().localScale =  new Vector3(distance,distance,distance);
+        }
         }
     }
 
