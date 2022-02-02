@@ -15,7 +15,7 @@ public class CreatePalette : MonoBehaviour
                 GameObject paletteNode = Instantiate(nodeSpawnerPrefab, new Vector3(0, 1 + i/3f, -1 ), Quaternion.identity);
                 Color myColor = new Color();
                 ColorUtility.TryParseHtmlString (Palette.colors[i], out myColor);
-                paletteNode.transform.Find("Sphere").GetComponent<Renderer>().material.color = myColor;
+                paletteNode.GetComponent<Renderer>().material.color = myColor;
         }
 
     }
