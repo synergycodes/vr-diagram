@@ -18,6 +18,7 @@ public class CreateShapePalette : MonoBehaviour
         modifyNodeShape = gameObject.GetComponent<ModifyNodeShape>();
         for (int i = 0 ; i < meshes.Length ; i++) {
             GameObject shape = Instantiate(shapePrefab, shapePalette.transform);
+            shape.GetComponent<Image>().sprite = sprites[i];
             shape.transform.localPosition = new Vector3(i*120, 0, 0);
             Mesh mesh = meshes[i];
             shape.GetComponent<Button>().onClick.AddListener(() => modifyNodeShape.modify(mesh) );

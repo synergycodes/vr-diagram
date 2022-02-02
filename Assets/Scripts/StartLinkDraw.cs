@@ -24,7 +24,7 @@ public class StartLinkDraw : MonoBehaviour
     }
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.One)) {
+        if (OVRInput.GetDown(OVRInput.Button.Three)) {
 
             GameObject link = Instantiate(linkPrefab);
             linkPositionUpdater = link.GetComponent<LinkPositionUpdater>();
@@ -34,7 +34,7 @@ public class StartLinkDraw : MonoBehaviour
 
         }
 
-        if (OVRInput.GetUp(OVRInput.Button.One)) {
+        if (OVRInput.GetUp(OVRInput.Button.Three)) {
             portTo =findClosestByTag.find("portTo").gameObject;
             linkPositionUpdater.portTo = portTo;
         }
