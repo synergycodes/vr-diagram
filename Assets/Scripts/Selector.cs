@@ -15,7 +15,7 @@ public class Selector : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetButtonDown("1") | OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) ) {
+        if (OVRInput.GetDown(OVRInput.Button.Two) ) {
             highlightClosest(new List<string>(){"Node"});
         }
     }
