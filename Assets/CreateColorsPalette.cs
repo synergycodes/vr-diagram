@@ -18,7 +18,7 @@ public class CreateColorsPalette : MonoBehaviour
         for (int i = 0 ; i < Palette.colors.Length ; i++) {
 
                 GameObject color = Instantiate(colorPrefab, colorPaletteContainer.transform);
-                color.transform.localPosition = new Vector3(-130 + i * 40,0,0);
+                color.transform.localPosition = new Vector3(-130 + i * 60,0,0);
                 color.transform.localScale = new Vector3(1,1,1);
 
                 Color myColor = new Color();

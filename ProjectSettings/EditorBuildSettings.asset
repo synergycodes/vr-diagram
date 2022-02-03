@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Complete scene with extras and debug moving.unity
+    guid: aa3a68edc011cc742add8b05b9523ad0
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: faa973a7159c9ba4d8a7f9f5841b61af, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2e5e9aefead84784484902654587c023, type: 2}
