@@ -17,10 +17,9 @@ public class FindClosestByTag : MonoBehaviour
     public GameObject objectToCalculatedistanceFrom;
 
     // Start is called before the first frame update
-    public ClosestObject find(string tag)
+    public GameObject find(string tag)
     {
         GameObject[] gos;
-        ClosestObject closestObject = new ClosestObject();
         gos = GameObject.FindGameObjectsWithTag(tag);
         GameObject closest = null;
         float distance = Mathf.Infinity;
@@ -35,18 +34,7 @@ public class FindClosestByTag : MonoBehaviour
                 distance = curDistance;
             }
         }
-        closestObject.setData(distance, closest);
-        return closestObject;
+        return closest;
     }
 
-    public ClosestObject recalculateClosest(ClosestObject closestObject) {
-
-        Vector3 position = objectToCalculatedistanceFrom.transform.position;
-        Vector3 diff = closestObject.gameObject.transform.position - position;
-        float curDistance = diff.sqrMagnitude;
-
-        closestObject.distance = curDistance;
-
-        return closestObject;
-    }
 }

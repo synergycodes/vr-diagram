@@ -7,7 +7,7 @@ public class ModifyNodeColor : MonoBehaviour
         selector = gameObject.GetComponent<Selector>();
     }
    public void modify(Color selectedColor) {
-            GameObject selectedNode = selector.current.gameObject;
+            GameObject selectedNode = selector.selected;
             selectedNode.GetComponent<Renderer>().material = Instantiate(Resources.Load("Material") as Material );
             if (selectedNode) {
             selectedNode.GetComponent<Renderer>().material.color = selectedColor;

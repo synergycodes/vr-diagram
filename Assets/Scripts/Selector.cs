@@ -1,14 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static FindClosestByTag;
 
 public class Selector : MonoBehaviour
 {
 
     FindClosestByTag findClosestByTag;
-    ClosestObject closest = new ClosestObject();
-    public ClosestObject current = new ClosestObject();
+    GameObject prev;
+    public GameObject selected;
     void Start()
     {
         findClosestByTag =  gameObject.GetComponent<FindClosestByTag>();
@@ -16,28 +14,22 @@ public class Selector : MonoBehaviour
 
     void Update() {
         if (OVRInput.GetDown(OVRInput.Button.Two) ) {
-            highlightClosest(new List<string>(){"Node"});
+            selectClosest("Node");
         }
     }
 
-    public void highlightClosest(List<string> tags) {
-        if (closest.gameObject){
-            closest = findClosestByTag.recalculateClosest(closest);
+    public void selectClosest(string tag) {
+
+        if (prev){
+            prev.gameObject.GetComponent<Outline>().OutlineWidth = 0;
         }
 
+        selected = findClosestByTag.find(tag);
 
-        foreach(string el in tags)
-        {
-            current = findClosestByTag.find(el);
-            if ((current.distance < closest.distance)) {
-                if (closest.gameObject) {
-                   closest.gameObject.GetComponent<Outline>().OutlineWidth = 0;
-                }
-                closest = current;
-            }
+        if (selected) {
+            selected.gameObject.GetComponent<Outline>().OutlineWidth = 3;
         }
-        if (closest.gameObject) {
-            closest.gameObject.GetComponent<Outline>().OutlineWidth = 3;
-        }
+
+        prev = selected;
     }
 }

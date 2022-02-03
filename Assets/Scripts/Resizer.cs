@@ -15,15 +15,15 @@ public class Resizer : MonoBehaviour
     void Update()
     {
         if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) {
-            if (selector.current.gameObject) {
+            if (selector.selected.gameObject) {
             float distance  = calculateDistance();
-            selector.current.gameObject.GetComponent<Transform>().localScale =  new Vector3(distance,distance,distance);
+            selector.selected.gameObject.GetComponent<Transform>().localScale =  new Vector3(distance,distance,distance);
         }
         }
     }
 
     private float calculateDistance() {
-        Vector3 diff = selector.current.gameObject.transform.position - hand.transform.position;
+        Vector3 diff = selector.selected.gameObject.transform.position - hand.transform.position;
         return Math.Min(diff.sqrMagnitude * 3, 1.15f) ;
     }
 }

@@ -23,7 +23,7 @@ public class ModifyNodeDescription : MonoBehaviour
     // Update is called once per frame
     void updateNodeDescription()
     {
-        GameObject selectedNode = selector.current.gameObject;
+        GameObject selectedNode = selector.selected;
          selectedNode.transform.Find("Description").GetComponent<TextMesh>().text = input.text;
     }
 }

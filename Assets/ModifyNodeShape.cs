@@ -8,7 +8,7 @@ public class ModifyNodeShape : MonoBehaviour
         selector = gameObject.GetComponent<Selector>();
     }
    public void modify(Mesh mesh) {
-            GameObject selectedNode = selector.current.gameObject;
+            GameObject selectedNode = selector.selected;
 
             if (selectedNode) {
             selectedNode.GetComponent<MeshFilter>().mesh = mesh;
